@@ -26,9 +26,9 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
         const data = await response.json();
 
         if (response.ok) {
-            window.location.href = 'login.html'; // Redirect to login page after successful signup
+            window.location.href = 'work.html'; // Redirect to work.html after successful signup
         } else {
-            errorMessage.textContent = data.message;
+            errorMessage.textContent = data.message || 'Signup failed';
             errorMessage.style.color = 'red';
         }
     } catch (error) {

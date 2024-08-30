@@ -19,9 +19,9 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 
         if (response.ok) {
             localStorage.setItem('token', data.token); // Store the token
-            window.location.href = 'somepage.html'; // Redirect after successful login
+            window.location.href = 'work.html'; // Redirect to work.html after successful login
         } else {
-            errorMessage.textContent = data.message;
+            errorMessage.textContent = data.message || 'Login failed';
             errorMessage.style.color = 'red';
         }
     } catch (error) {
