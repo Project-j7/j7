@@ -14,7 +14,16 @@ mongoose.connect(process.env.MONGODB_URI, {
     useUnifiedTopology: true,
 })
     .then(() => console.log('MongoDB connected'))
-    .catch(err => console.log(err));
+    .catch(err => console.log('MongoDB connection error:', err));
+
+// Health check route
+app.get('/api/health', (req, res) => {
+    if (mongoose.connection.readyState === 1) { // 1 means connected
+        res.status(200).json({ status: 'MongoDB is connected' });
+    } else {
+        res.status(500).json({ status: 'MongoDB is not connected' });
+    }
+});
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));

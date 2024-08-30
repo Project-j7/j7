@@ -7,6 +7,7 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
     const confirmPassword = document.getElementById('confirm-password').value;
 
     const errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = ''; // Clear any previous error messages
 
     if (password !== confirmPassword) {
         errorMessage.textContent = 'Passwords do not match';
@@ -26,9 +27,9 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
         const data = await response.json();
 
         if (response.ok) {
-            window.location.href = 'work.html'; // Redirect to work.html after successful signup
+            window.location.href = 'login.html'; // Redirect to login page after successful signup
         } else {
-            errorMessage.textContent = data.message || 'Signup failed';
+            errorMessage.textContent = data.message || 'Failed to sign up. Please check your details and try again.';
             errorMessage.style.color = 'red';
         }
     } catch (error) {
