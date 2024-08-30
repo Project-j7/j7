@@ -19,16 +19,17 @@
             <p>Welcome back! Please enter your details to login.</p>
         </div>
         <div class="login-body">
-            <form>
+            <form id="loginForm">
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" class="form-control" placeholder="Enter your password">
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <p id="error-message"></p>
             </form>
             <div class="text-center mt-3">
                 <a href="signup.html" class="btn btn-link">Create an account</a>
@@ -36,6 +37,6 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+<script type="text/javascript" src="login.js"></script>
 </body>
 </html>
