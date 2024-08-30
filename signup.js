@@ -15,7 +15,7 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
     }
 
     try {
-        const response = await fetch('https://jewellerys-projects-j7.vercel.app/routes/auth/signup', {
+        const response = await fetch('https://jewellerys-projects-j7.vercel.app/api/auth/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
