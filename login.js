@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     const errorMessage = document.getElementById('error-message');
 
     try {
-        const response = await fetch('https://jewellerys-projects-j7.vercel.app/api/auth/login', {
+        const response = await fetch('https://jewellerys-projects-j7.vercel.app/routes/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
