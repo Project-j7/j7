@@ -1,0 +1,64 @@
+body {
+    background-color: #f0f8ff; /* Light sky blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-wrapper {
+    background-color: #ffffff; /* White background for the login form */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.login-header h2 {
+    color: #0096d6; /* Sky blue color for the header */
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.btn-primary {
+    background-color: #0096d6; /* Sky blue background for the button */
+    border-color: #0096d6;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #007bb5; /* Darker sky blue on hover */
+    border-color: #007bb5;
+}
+
+.btn-link {
+    color: #0096d6; /* Sky blue for the link */
+}
+
+.btn-link:hover {
+    color: #007bb5; /* Darker sky blue on hover */
+}
