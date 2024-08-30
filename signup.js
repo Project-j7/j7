@@ -7,7 +7,6 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
     const confirmPassword = document.getElementById('confirm-password').value;
 
     const errorMessage = document.getElementById('error-message');
-    errorMessage.textContent = ''; // Clear any previous error messages
 
     if (password !== confirmPassword) {
         errorMessage.textContent = 'Passwords do not match';
@@ -29,12 +28,12 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
         if (response.ok) {
             window.location.href = 'login.html'; // Redirect to login page after successful signup
         } else {
-            errorMessage.textContent = data.message || 'Failed to sign up. Please check your details and try again.';
+            errorMessage.textContent = data.message || 'An unexpected error occurred. Please try again later.';
             errorMessage.style.color = 'red';
         }
     } catch (error) {
         console.error('Error:', error);
-        errorMessage.textContent = 'An unexpected error occurred. Please try again later.';
+        errorMessage.textContent = 'Network error. Please check your internet connection and try again.';
         errorMessage.style.color = 'red';
     }
 });

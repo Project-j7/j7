@@ -5,7 +5,6 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     const password = document.getElementById('password').value;
 
     const errorMessage = document.getElementById('error-message');
-    errorMessage.textContent = ''; // Clear any previous error messages
 
     try {
         const response = await fetch('https://jewellerys-projects-j7.vercel.app/api/auth/login', {
@@ -20,14 +19,14 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 
         if (response.ok) {
             localStorage.setItem('token', data.token); // Store the token
-            window.location.href = 'work.html'; // Redirect to work page after successful login
+            window.location.href = 'work.html'; // Redirect after successful login
         } else {
-            errorMessage.textContent = data.message || 'Login failed. Please check your credentials and try again.';
+            errorMessage.textContent = data.message || 'An unexpected error occurred. Please try again later.';
             errorMessage.style.color = 'red';
         }
     } catch (error) {
         console.error('Error:', error);
-        errorMessage.textContent = 'An unexpected error occurred. Please try again later.';
+        errorMessage.textContent = 'Network error. Please check your internet connection and try again.';
         errorMessage.style.color = 'red';
     }
 });
