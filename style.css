@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
+/* Styles for medium devices (up to 991px) */
 .landing_page_md {
     background-color: #CACEDA;
     max-width: 100%;
     min-height: 100vh;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .landing_page_title_md {
@@ -14,7 +20,7 @@
 .landing_page_title_heading_md {
     font-weight: bolder;
     font-size: 27px;
-    font-family: Playfair display;
+    font-family: 'Playfair Display', serif;
 }
 
 .landing_page_title_para_md {
@@ -26,23 +32,27 @@
     background-color: black;
     color: #CCD0DC;
     border-radius: 10px;
-    height: 40px;
-    width: 100px;
-    font-size: 15px;
-    border: None;
-    border: solid 1px black;
+    height: 50px; /* Adjusted height */
+    width: 150px; /* Adjusted width */
+    font-size: 16px; /* Adjusted font size */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Spacing from other elements */
 }
 
-
-
-
-
-
+/* Styles for large devices (992px and above) */
 .landing_page_lg {
     background-image: url("https://i.imgur.com/wJCrhkT.jpeg");
     min-height: 100vh;
     width: 100vw;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .navItem_lg:hover {
@@ -52,11 +62,11 @@
 
 #login_signup_button_lg {
     color: black;
-    font-family: "Roboto";
+    font-family: 'Roboto', sans-serif;
     border-radius: 30px;
     background-color: #CCD0DC;
-    padding: 6px;
-    font-size: 13px;
+    padding: 8px 16px; /* Adjusted padding */
+    font-size: 14px; /* Adjusted font size */
     border: 1px solid black;
 }
 
@@ -67,7 +77,7 @@
 .landing_page_title_heading_lg {
     font-weight: bolder;
     font-size: 65px;
-    font-family: Playfair display;
+    font-family: 'Playfair Display', serif;
 }
 
 .landing_page_title_para_lg {
@@ -79,9 +89,12 @@
     background-color: black;
     color: #CCD0DC;
     border-radius: 15px;
-    height: 65px;
-    width: 150px;
-    font-size: 20px;
-    border: None;
-    border: solid 1px black;
+    height: 60px; /* Adjusted height */
+    width: 180px; /* Adjusted width */
+    font-size: 22px; /* Adjusted font size */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Spacing from other elements */
 }
