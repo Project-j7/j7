@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('https://your-vercel-deployment-url.com/login', {
+            const response = await fetch('https://j7-4b3pfbnby-jewellerys-projects.vercel.app/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch('https://your-vercel-deployment-url.com/signup', {
+            const response = await fetch('https://j7-4b3pfbnby-jewellerys-projects.vercel.app/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
